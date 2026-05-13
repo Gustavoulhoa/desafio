@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- SEO - Meta Tags -->
-    <title>São Gonçalo do Rio Abaixo - Turismo, Natureza e Aventura em Minas Gerais</title>
-    <meta name="description" content="Descubra São Gonçalo do Rio Abaixo - um paraíso escondido em Minas Gerais com cachoeiras cristalinas, trilhas ecológicas e hospitalidade mineira. Planeje sua visita!">
-    <meta name="keywords" content="São Gonçalo do Rio Abaixo, turismo Minas Gerais, cachoeiras, ecoturismo, Serra do Espinhaço">
+    <title>São Gonçalo do Rio Abaixo - Turismo, Cultura e Tradição em Minas Gerais</title>
+    <meta name="description" content="Descubra São Gonçalo do Rio Abaixo - um paraíso escondido em Minas Gerais com cachoeiras cristalinas, Cavalhada tradicional, Apicultura premiada, Feira na Praça e Moto Rock. Planeje sua visita!">
+    <meta name="keywords" content="São Gonçalo do Rio Abaixo, turismo Minas Gerais, cachoeiras, Cavalhada, Apicultura, Feira na Praça, Moto Rock, ecoturismo, Serra do Espinhaço">
     <meta name="author" content="Turismo São Gonçalo">
     <meta name="robots" content="index, follow">
     
@@ -15,20 +15,20 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://turismo.saogoncalo.mg.gov.br">
     <meta property="og:title" content="São Gonçalo do Rio Abaixo - Turismo Oficial">
-    <meta property="og:description" content="Descubra as belezas naturais de São Gonçalo do Rio Abaixo">
+    <meta property="og:description" content="Descubra as belezas naturais, cultura e tradições de São Gonçalo do Rio Abaixo">
     <meta property="og:image" content="images/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://turismo.saogoncalo.mg.gov.br">
     <meta property="twitter:title" content="São Gonçalo do Rio Abaixo - Turismo Oficial">
-    <meta property="twitter:description" content="Descubra as belezas naturais de São Gonçalo do Rio Abaixo">
+    <meta property="twitter:description" content="Descubra as belezas naturais, cultura e tradições de São Gonçalo do Rio Abaixo">
     <meta property="twitter:image" content="images/og-image.jpg">
     
     <!-- Preload de recursos importantes -->
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="images/banner-principal.jpg" as="image">
-    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="assent/logo.png.jpg" as="image">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -45,36 +45,46 @@
 </head>
 <body>
 
-    <!-- ========== BOTÃO DO CHAT BOT ========== -->
+    <!-- ========== BOTÃO DO CHAT BOT COM LOGO ========== -->
     <button id="chatButton" class="chat-button" aria-label="Abrir chat de atendimento" title="Atendimento Turístico">
-        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        <div class="chat-logo">
+            <img src="assent/chat-logo.jpg" alt="Chat Bot Logo" class="chat-logo-img">
+        </div>
         <span class="notification-badge" id="chatNotification" style="display: none;">1</span>
+        <div class="chat-pulse"></div>
     </button>
 
     <!-- ========== MODAL DO CHAT ========== -->
     <div id="chatModal" class="chat-modal" role="dialog" aria-label="Chat de atendimento turístico" aria-hidden="true">
         <div class="chat-container">
             <div class="chat-header">
-                <h3>
-                    <i class="fas fa-headset" aria-hidden="true"></i>
-                    Atendimento Turístico
-                </h3>
+                <div class="chat-header-info">
+                    <div class="chat-header-logo">
+                        <img src="images/chat-logo-small.png" alt="Logo">
+                    </div>
+                    <div>
+                        <h3>Atendimento Turístico</h3>
+                        <span class="chat-status">Online</span>
+                    </div>
+                </div>
                 <button class="close-chat" aria-label="Fechar chat">&times;</button>
             </div>
             <div class="chat-messages" id="chatMessages">
                 <div class="message bot">
                     <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
+                        <img src="images/chat-logo-small.png" alt="Bot">
                     </div>
                     <div class="message-content">
                         <strong>Assistente Turístico</strong>
                         <p>Olá! 👋 Sou o assistente virtual de turismo de São Gonçalo do Rio Abaixo.</p>
                         <p>Posso ajudar com:<br>
                         🏞️ Cachoeiras<br>
-                        🥾 Trilhas<br>
+                        🐎 Cavalhada e Eventos<br>
+                        🐝 Apicultura e Mel<br>
+                        🎸 Moto Rock<br>
+                        🛍️ Feira na Praça<br>
                         🏨 Hospedagem<br>
-                        🗺️ Mapa interativo<br>
-                        📍 Eventos locais</p>
+                        🗺️ Mapa interativo</p>
                         <p>Como posso ajudar você hoje?</p>
                     </div>
                 </div>
@@ -99,6 +109,7 @@
                 <a href="#home" aria-label="Ir para início">Home</a>
                 <a href="#destinos" aria-label="Ver destinos turísticos">Destinos</a>
                 <a href="#sobre" aria-label="Sobre a cidade">Sobre</a>
+                <a href="#eventos" aria-label="Ver eventos">Eventos</a>
                 <a href="pages/mapa.html" aria-label="Ver mapa interativo">Mapa</a>
                 <a href="#contato" aria-label="Entrar em contato">Contato</a>
             </div>
@@ -116,13 +127,13 @@
                 <i class="fas fa-map-marker-alt"></i> Minas Gerais, Brasil
             </div>
             <h1>Descubra São Gonçalo <br><span class="highlight">do Rio Abaixo</span></h1>
-            <p>Natureza preservada, águas cristalinas e a melhor hospitalidade mineira</p>
+            <p>Natureza preservada, tradições seculares e a melhor hospitalidade mineira</p>
             <div class="hero-buttons">
                 <button class="cta-button" onclick="document.getElementById('destinos').scrollIntoView({behavior: 'smooth'})">
                     Explorar Destinos <i class="fas fa-arrow-right"></i>
                 </button>
-                <a href="pages/mapa.html" class="cta-button-secondary">
-                    <i class="fas fa-map"></i> Ver Mapa
+                <a href="#eventos" class="cta-button-secondary">
+                    <i class="fas fa-calendar-alt"></i> Ver Eventos
                 </a>
             </div>
             <div class="hero-stats">
@@ -136,7 +147,7 @@
                 </div>
                 <div class="stat">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Natureza</span>
+                    <span class="stat-label">Tradiçāo</span>
                 </div>
             </div>
         </div>
@@ -156,12 +167,12 @@
         <div class="cards-container">
             <div class="card" data-aos="fade-up">
                 <div class="card-image">
-                    <img src="images/cachoeira.jpg" alt="Cachoeira do Funil" loading="lazy">
+                    <img src="images/cachoeira.jpg" alt="Cachoeiras de São Gonçalo" loading="lazy">
                     <div class="card-badge">Mais Visitado</div>
                 </div>
                 <div class="card-content">
-                    <h3>Cachoeiras Paradisíacas</h3>
-                    <p>Deslumbre-se com as mais belas cachoeiras da região, com águas cristalinas e paisagens de tirar o fôlego.</p>
+                    <h3><i class="fas fa-water"></i> Cachoeiras e Natureza</h3>
+                    <p>Deslumbre-se com as mais belas cachoeiras da região, com águas cristalinas e fácil acesso para toda família.</p>
                     <div class="card-footer">
                         <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -169,12 +180,12 @@
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-image">
-                    <img src="images/trilha.jpg" alt="Trilhas ecológicas" loading="lazy">
-                    <div class="card-badge">Aventura</div>
+                    <img src="images/cavalhada.jpg" alt="Cavalhada em São Gonçalo" loading="lazy">
+                    <div class="card-badge">Tradiçāo Viva</div>
                 </div>
                 <div class="card-content">
-                    <h3>Trilhas Ecológicas</h3>
-                    <p>Aventure-se pelas trilhas da Serra do Espinhaço e conecte-se com a natureza em sua forma mais pura.</p>
+                    <h3><i class="fas fa-horse"></i> Cultura e Tradiçāo</h3>
+                    <p>Viva a emoção da Cavalhada e a energia do Moto Rock, eventos que unem o passado e o futuro da nossa terra.</p>
                     <div class="card-footer">
                         <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -182,12 +193,12 @@
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-image">
-                    <img src="images/mirante.jpg" alt="Mirantes" loading="lazy">
-                    <div class="card-badge">Vista 360°</div>
+                    <img src="images/feira-praca.jpg" alt="Feira na Praça" loading="lazy">
+                    <div class="card-badge">Sabores Locais</div>
                 </div>
                 <div class="card-content">
-                    <h3>Mirantes Incríveis</h3>
-                    <p>Contemple vistas espetaculares do Vale do Rio Doce a partir dos mirantes da cidade.</p>
+                    <h3><i class="fas fa-apple-alt"></i> Sabores da Praça</h3>
+                    <p>Conheça a nossa Apicultura premiada e os produtos artesanais na tradicional Feira na Praça todos os sábados.</p>
                     <div class="card-footer">
                         <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -202,35 +213,80 @@
             <div class="sobre-content" data-aos="fade-right">
                 <span class="section-subtitle">Nossa História</span>
                 <h2>Sobre São Gonçalo <span class="highlight">do Rio Abaixo</span></h2>
-                <p>Localizada no coração de Minas Gerais, São Gonçalo do Rio Abaixo é um destino que encanta por sua beleza natural e hospitalidade única.</p>
-                <p>Com uma rica história ligada à mineração e um presente voltado para o ecoturismo, a cidade oferece experiências inesquecíveis para todos os tipos de viajantes.</p>
+                <p>Localizada no coração de Minas Gerais, São Gonçalo do Rio Abaixo é um destino que encanta por sua beleza natural, tradições seculares e hospitalidade única.</p>
+                <p>Com uma rica história ligada à mineração e um presente voltado para o ecoturismo e valorização cultural, a cidade oferece experiências inesquecíveis para todos os tipos de viajantes.</p>
                 <div class="sobre-features">
                     <div class="feature">
-                        <i class="fas fa-tree"></i>
-                        <span>Mata Atlântica preservada</span>
+                        <i class="fas fa-horse"></i>
+                        <span>Cavalhadas Seculares</span>
                     </div>
                     <div class="feature">
-                        <i class="fas fa-water"></i>
-                        <span>Águas cristalinas</span>
+                        <i class="fas fa-bee"></i>
+                        <span>Mel de Qualidade (Apicultura)</span>
                     </div>
                     <div class="feature">
-                        <i class="fas fa-mountain"></i>
-                        <span>Serra do Espinhaço</span>
+                        <i class="fas fa-guitar"></i>
+                        <span>Encontro de Moto Rock</span>
                     </div>
-                </div>
-                <div class="instagram-feed">
-                    <i class="fab fa-instagram"></i>
-                    <div>
-                        <h3>Siga nossas aventuras</h3>
-                        <a href="https://www.instagram.com/saogoncaloturismo" target="_blank" rel="noopener noreferrer" class="insta-follow">
-                            @saogoncaloturismo
-                        </a>
+                    <div class="feature">
+                        <i class="fas fa-store"></i>
+                        <span>Feira na Praça e Artesanato</span>
                     </div>
                 </div>
             </div>
             <div class="sobre-image" data-aos="fade-left">
-                <img src="images/sobre.jpg" alt="Vista panorâmica de São Gonçalo do Rio Abaixo" loading="lazy">
-                <div class="image-caption">Vista do Mirante da Serra</div>
+                <img src="images/igreja-matriz.jpg" alt="Igreja Matriz de São Gonçalo do Rio Abaixo" loading="lazy">
+                <div class="image-caption">Igreja Matriz - Centro Histórico</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EVENTOS SECTION ========== -->
+    <section id="eventos" class="eventos">
+        <div class="section-header">
+            <span class="section-subtitle">Agenda Cultural</span>
+            <h2 class="section-title">O que acontece <span class="highlight">agora</span> em São Gonçalo</h2>
+            <p class="section-description">Não perca os principais eventos que movimentam a cidade</p>
+        </div>
+        <div class="eventos-container">
+            <div class="evento-card" data-aos="fade-up">
+                <div class="evento-data">
+                    <span class="evento-dia">15</span>
+                    <span class="evento-mes">JUN</span>
+                </div>
+                <div class="evento-info">
+                    <h3>🐎 Cavalhada de São Gonçalo</h3>
+                    <p>Uma das tradições mais antigas da cidade, com desfile de cavaleiros, competições e festa na praça.</p>
+                    <div class="evento-local">
+                        <i class="fas fa-map-marker-alt"></i> Campo da Cavalhada
+                    </div>
+                </div>
+            </div>
+            <div class="evento-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="evento-data">
+                    <span class="evento-dia">22</span>
+                    <span class="evento-mes">JUN</span>
+                </div>
+                <div class="evento-info">
+                    <h3>🎸 Moto Rock Festival</h3>
+                    <p>Encontro de motociclistas com muito rock, gastronomia e adrenalina. Venha fazer parte!</p>
+                    <div class="evento-local">
+                        <i class="fas fa-map-marker-alt"></i> Parque de Exposições
+                    </div>
+                </div>
+            </div>
+            <div class="evento-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="evento-data">
+                    <span class="evento-dia">SÁB</span>
+                    <span class="evento-mes">TODO</span>
+                </div>
+                <div class="evento-info">
+                    <h3>🛍️ Feira na Praça</h3>
+                    <p>Produtos artesanais, mel orgânico, quitutes mineiros e artesanato local. Todos os sábados!</p>
+                    <div class="evento-local">
+                        <i class="fas fa-map-marker-alt"></i> Praça da Matriz
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -286,9 +342,11 @@
                 <div class="form-group">
                     <select id="assunto" aria-label="Assunto da mensagem">
                         <option value="">Selecione o assunto</option>
-                        <option value="informacoes">Informações turísticas</option>
+                        <option value="cachoeiras">Cachoeiras e Trilhas</option>
+                        <option value="cavalhada">Cavalhada e Eventos</option>
+                        <option value="apicultura">Apicultura e Mel</option>
+                        <option value="feira">Feira na Praça</option>
                         <option value="hospedagem">Hospedagem</option>
-                        <option value="eventos">Eventos</option>
                         <option value="outros">Outros</option>
                     </select>
                 </div>
@@ -331,6 +389,7 @@
                     <a href="#home">Home</a>
                     <a href="#destinos">Destinos</a>
                     <a href="#sobre">Sobre</a>
+                    <a href="#eventos">Eventos</a>
                     <a href="pages/mapa.html">Mapa</a>
                 </div>
                 <div class="footer-column">
@@ -351,7 +410,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Turismo São Gonçalo do Rio Abaixo - MG. Todos os direitos reservados.</p>
-            <p>Desenvolvido com <i class="fas fa-heart"></i> para você explorar</p>
+            <p>Descubra a tradição, o sabor e a aventura de Minas Gerais</p>
         </div>
     </footer>
 
@@ -359,9 +418,126 @@
     <script src="js/main.js"></script>
     <script src="js/chat.js"></script>
     
+    <!-- Scripts para o chat com logo -->
+    <script>
+        // Chat Bot Funcionalidade com Logo
+        const chatButton = document.getElementById('chatButton');
+        const chatModal = document.getElementById('chatModal');
+        const closeChat = document.querySelector('.close-chat');
+        const sendButton = document.getElementById('sendMessage');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        const botResponses = {
+            'ola': 'Olá! Como posso ajudar com turismo em São Gonçalo?',
+            'cachoeira': 'Temos várias cachoeiras incríveis! A Cachoeira do Funil é a mais famosa. Quer saber como chegar?',
+            'cavalhada': 'A Cavalhada é nossa tradição mais antiga! Acontece em junho. Quer mais informações sobre as datas?',
+            'moto rock': 'O Moto Rock Festival é um evento imperdível! Música, adrenalina e muita diversão. Vem aí!',
+            'apicultura': 'Nosso mel é premiado! Você encontra na Feira na Praça todos os sábados.',
+            'feira': 'A Feira na Praça acontece todos os sábados, das 8h às 14h, na Praça da Matriz.',
+            'evento': 'Temos Cavalhada, Moto Rock e Feira na Praça. Qual você gostaria de saber mais?',
+            'hotel': 'Temos pousadas aconchegantes. Recomendo a Pousada Recanto da Serra!',
+            'mapa': 'Clique no menu "Mapa" para ver todas as atrações da cidade!',
+            'default': 'Posso ajudar com: cachoeiras, Cavalhada, Moto Rock, Apicultura, Feira na Praça, hospedagem ou mapa.'
+        };
+
+        chatButton.addEventListener('click', () => chatModal.classList.add('active'));
+        closeChat.addEventListener('click', () => chatModal.classList.remove('active'));
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if(!message) return;
+            
+            addMessage(message, 'user');
+            chatInput.value = '';
+            
+            setTimeout(() => {
+                const response = getBotResponse(message.toLowerCase());
+                addMessage(response, 'bot');
+            }, 500);
+        }
+
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            if(sender === 'bot') {
+                messageDiv.innerHTML = `
+                    <div class="message-avatar">
+                        <img src="images/chat-logo-small.png" alt="Bot">
+                    </div>
+                    <div class="message-content">
+                        <strong>Assistente Turístico</strong>
+                        <p>${text}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <p>${text}</p>
+                    </div>
+                `;
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getBotResponse(msg) {
+            for(const [key, response] of Object.entries(botResponses)) {
+                if(msg.includes(key)) return response;
+            }
+            return botResponses.default;
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => e.key === 'Enter' && sendMessage());
+
+        document.addEventListener('click', (e) => {
+            if(!chatModal.contains(e.target) && !chatButton.contains(e.target) && chatModal.classList.contains('active')) {
+                chatModal.classList.remove('active');
+            }
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('.nav-links a, .cta-button, .cta-button-secondary').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.getElementById(href.substring(1));
+                    target && target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // FORM CONTATO
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Responderemos em até 24h.');
+            this.reset();
+        });
+
+        // NEWSLETTER
+        document.getElementById('newsletterForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Inscrição realizada! Você receberá nossas novidades.');
+            this.reset();
+        });
+
+        // SCROLL EFFECT NAVBAR
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if(window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
     <!-- Adiciona suporte para animações -->
     <script>
-        // Simple AOS implementation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
